@@ -7,9 +7,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {
-  height: 100vh;
   display: grid;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto auto;
   grid-template-columns: auto;
   grid-template-areas:
     "header header header header"
@@ -108,4 +107,10 @@ li {
   flex-direction: column;
   grid-row: 3 / -1;
   grid-column: 1/2;
+  background-color: rgba(255, 80, 80, 0.932);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.5em;
+  grid-auto-rows: 100%;
 }
