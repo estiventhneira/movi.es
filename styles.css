@@ -8,15 +8,23 @@ body {
 }
 .container {
   display: grid;
-  grid-template-rows: auto auto auto auto;
-  grid-template-columns: auto;
+  grid-template-rows: 20px auto auto;
+  grid-template-columns: 150px 1fr;
   grid-template-areas:
-    "header header header header"
-    "- titulo titulo titulo";
+    "titulo titulo titulo"
+    "header header header";
   gap: 35px;
+  margin-top: 35px;
+}
+
+.container-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 .titulo {
   grid-area: titulo;
+  grid-column: 2 / -1;
 }
 
 .left-list {
@@ -75,7 +83,6 @@ li {
 .movie {
   background-color: rgba(201, 201, 201, 0.849);
   border-radius: 20px;
-  width: 90%;
 }
 
 .movie img {
@@ -103,14 +110,15 @@ li {
 }
 
 .left-bar {
-  display: flex;
   flex-direction: column;
-  grid-row: 3 / -1;
-  grid-column: 1/2;
+  grid-row: 2 / -1;
   background-color: rgba(255, 80, 80, 0.932);
   color: white;
   border-radius: 20px;
   padding: 20px;
   font-size: 1.5em;
-  grid-auto-rows: 100%;
+}
+
+header {
+  box-shadow: 1px 1px 7px #00000042;
 }
